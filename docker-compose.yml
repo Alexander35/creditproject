@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: .
+#    command: ls -la
+    command: python creditproject/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+
